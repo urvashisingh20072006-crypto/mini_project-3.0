@@ -159,5 +159,5 @@ if len(averages) > 0:
     print("Class Average:", round(class_average, 2))
     print("Highest Average:", round(max(averages), 2))
     print("Lowest Average:", round(min(averages), 2))
-# else:
-#     print("No student records available.")
+else:
+    print("No student records available.")
