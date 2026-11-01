@@ -101,63 +101,63 @@ else:
 
 
 
-# passed_subjects=set()
-# for student_id,details in students.item():
-#     marks=details["marks"]
+passed_subjects=set()
+for student_id,details in students.item():
+    marks=details["marks"]
 
-#     for i in range(len(subjects)):
-#         if marks[i]>=40:
-#           passed_subjects.add(subjects[i])
-#           print("Subjects passed by at least one student:", passed_subjects)
+    for i in range(len(subjects)):
+        if marks[i]>=40:
+          passed_subjects.add(subjects[i])
+          print("Subjects passed by at least one student:", passed_subjects)
 
 
-#           # Select two students
-# id1 = input("Enter first Student ID: ")
-# id2 = input("Enter second Student ID: ")
+          # Select two students
+id1 = input("Enter first Student ID: ")
+id2 = input("Enter second Student ID: ")
 
-# if id1 in students and id2 in students:
+if id1 in students and id2 in students:
 
-#     passed1 = set()
-#     passed2 = set()
+    passed1 = set()
+    passed2 = set()
 
-#     # First student's passed subjects
-#     for i in range(len(subjects)):
-#         if students[id1]["marks"][i] >= 40:
-#             passed1.add(subjects[i])
+    # First student's passed subjects
+    for i in range(len(subjects)):
+        if students[id1]["marks"][i] >= 40:
+            passed1.add(subjects[i])
 
-#     # Second student's passed subjects
-#     for i in range(len(subjects)):
-#         if students[id2]["marks"][i] >= 40:
-#             passed2.add(subjects[i])
+    # Second student's passed subjects
+    for i in range(len(subjects)):
+        if students[id2]["marks"][i] >= 40:
+            passed2.add(subjects[i])
 
-#     print("\nFirst Student Passed Subjects:", passed1)
-#     print("Second Student Passed Subjects:", passed2)
+    print("\nFirst Student Passed Subjects:", passed1)
+    print("Second Student Passed Subjects:", passed2)
 
-#     # Set operations
-#     print("Union:", passed1 | passed2)
-#     print("Intersection:", passed1 & passed2)
-#     print("Difference (First - Second):", passed1 - passed2)
-#     print("Symmetric Difference:", passed1 ^ passed2)
+    # Set operations
+    print("Union:", passed1 | passed2)
+    print("Intersection:", passed1 & passed2)
+    print("Difference (First - Second):", passed1 - passed2)
+    print("Symmetric Difference:", passed1 ^ passed2)
 
-# else:
-#     print("Student ID not found.")
+else:
+    print("Student ID not found.")
 
-#     print("\n========== CLASS SUMMARY ==========")
+    print("\n========== CLASS SUMMARY ==========")
 
-# print("Total Students:", len(students))
+print("Total Students:", len(students))
 
-# averages = []
+averages = []
 
-# for student_id, details in students.items():
-#     marks = details["marks"]
-#     average = sum(marks) / len(marks)
-#     averages.append(average)
+for student_id, details in students.items():
+    marks = details["marks"]
+    average = sum(marks) / len(marks)
+    averages.append(average)
 
-# if len(averages) > 0:
-#     class_average = sum(averages) / len(averages)
+if len(averages) > 0:
+    class_average = sum(averages) / len(averages)
 
-#     print("Class Average:", round(class_average, 2))
-#     print("Highest Average:", round(max(averages), 2))
-#     print("Lowest Average:", round(min(averages), 2))
+    print("Class Average:", round(class_average, 2))
+    print("Highest Average:", round(max(averages), 2))
+    print("Lowest Average:", round(min(averages), 2))
 # else:
 #     print("No student records available.")
